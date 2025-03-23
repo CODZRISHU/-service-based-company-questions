@@ -1,33 +1,23 @@
-package numbersystem;
+package string;
+
 
 //import java.util.* ;
 public class ClassName {
-    public static boolean func(int num) {
-    
-        int sum = 0;
-        int t = num;
-        
-        while (t > 0) {
-            int rem = t % 10;
-            sum += rem;
-            System.out.println(sum);
-            t /= t;
+public static String func(String  num,String no) {
+        StringBuilder sb=new StringBuilder();
+        for(int i =0;i<num.length();i++){
+            sb.append(num.charAt(i));
         }
-        
+        for(int i =0;i<no.length();i++){
+            sb.append(no.charAt(i));
+        }
 
-        if (num % sum == 0) {
-            return true;
-        }else{
-        return false;}
-         }
-
+        String n = sb.toString();
+return n ;
+}
     public static void main(String[] args) {
-        int number = 121;
-        
-        if (func(number)) {
-            System.out.println(" harshad no");
-        } else {
-            System.out.println("not harsad no");
-        }
+        String number ="fgt" ;
+        String no = "cbc";
+        System.out.println(func(number,no));
     }
 }
